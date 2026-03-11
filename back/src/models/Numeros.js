@@ -7,7 +7,7 @@ export const Numeros = sequelize.define("numeros", {
     allowNull: false,
     primaryKey: true,
   },
-  userId: {
+  user_id: {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
