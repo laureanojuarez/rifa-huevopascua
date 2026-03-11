@@ -17,6 +17,6 @@ export const User = sequelize.define("user", {
   },
   apodo: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
 });

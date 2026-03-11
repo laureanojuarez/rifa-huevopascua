@@ -1,6 +1,13 @@
 import { Sequelize } from "sequelize";
+import dotenv from "dotenv";
 
-export const sequelize = new Sequelize({
-  dialect: "sqlite",
-  storage: "./rifahuevo.db",
+dotenv.config();
+
+export const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: "postgres",
+  host: "localhost",
+  ssl: {
+    require: true,
+    rejectUnauthorized: false,
+  },
 });
