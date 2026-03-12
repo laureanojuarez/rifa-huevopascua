@@ -1,85 +1,37 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-
-const Caja = ({ numero, user }) => {
-  const [flipped, setFlipped] = useState(false);
-  const tomado = !!user;
-
-  return (
-    <div
-      className="w-20 h-20 m-1 select-none"
-      style={{ perspective: "600px", cursor: tomado ? "pointer" : "default" }}
-      onClick={() => tomado && setFlipped((f) => !f)}
-    >
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          position: "relative",
-          transformStyle: "preserve-3d",
-          transition: "transform 0.5s",
-          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
-        }}
-      >
-        {/* Frente */}
-        <div
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-          }}
-          className="absolute inset-0 border-2 border-yellow-500 bg-white flex flex-col items-center justify-center rounded shadow-sm"
-        >
-          <p className="font-bold text-yellow-700 text-lg leading-none">
-            {numero}
-          </p>
-          {tomado && (
-            <span className="text-red-500 font-bold text-lg leading-none mt-1">
-              ✕
-            </span>
-          )}
-        </div>
-
-        {/* Dorso */}
-        <div
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-          }}
-          className="absolute inset-0 border-2 border-yellow-600 bg-yellow-500 flex flex-col items-center justify-center rounded shadow-sm"
-        >
-          <p className="text-white font-bold text-center text-xs px-1 leading-tight">
-            {user?.apodo || `${user?.nombre} ${user?.apellido}`}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { Caja } from "./components/Caja";
+import { getNumber } from "./hooks/getNumber";
 
 function App() {
-  const [numeros, setNumeros] = useState([]);
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/numeros")
-      .then((response) => setNumeros(response.data))
-      .catch((error) => console.error("Error al obtener numeros:", error));
-  }, []);
+  const { numeros, loading } = getNumber();
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center py-8 px-4">
-      <h1 className="text-3xl font-bold text-yellow-600 mb-1 tracking-wide">
-        🐣 Rifa Huevo de Pascua
-      </h1>
-      <p className="text-yellow-400 mb-6 text-sm">
-        Hacé clic en un número ocupado (✕) para ver quién lo tiene
-      </p>
-      <div className="flex flex-wrap justify-center max-w-3xl">
-        {numeros.map((n) => (
-          <Caja key={n.numero} numero={n.numero} user={n.user} />
-        ))}
+    <main className="min-h-screen bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50 flex flex-col items-center py-10 px-4 sm:px-8 font-sans">
+      <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
+        {/* Header */}
+        <div className="text-center mb-8 space-y-2">
+          <span className="text-5xl inline-block drop-shadow-md mb-2">🐣</span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-orange-500 tracking-tight drop-shadow-sm">
+            Rifa Huevo de Pascua
+          </h1>
+          <p className="text-gray-600 text-sm sm:text-base font-medium max-w-md mx-auto">
+            Hacé clic en los números ocupados (<span className="text-red-500 font-bold">✕</span>) para ver quién los compró.
+          </p>
+        </div>
+
+        {/* Loading o Grilla */}
+        {loading ? (
+          <div className="flex justify-center items-center h-40">
+            <div className="animate-spin rounded-full h-12 w-12 border-4 border-yellow-200 border-t-yellow-500"></div>
+          </div>
+        ) : (
+          <div className="w-full grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-3 auto-rows-fr">
+            {numeros.map((n) => (
+              <Caja key={n.numero} numero={n.numero} user={n.user} />
+            ))}
+          </div>
+        )}
       </div>
-    </div>
+    </main>
   );
 }
 
