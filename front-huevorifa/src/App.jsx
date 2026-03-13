@@ -1,8 +1,8 @@
 import { Caja } from "./components/Caja";
-import { getNumber } from "./hooks/getNumber";
+import { useNumeros } from "./hooks/useNumeros";
 
 function App() {
-  const { numeros, loading } = getNumber();
+  const { numeros, loading } = useNumeros();
 
   return (
     <main className="min-h-screen bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50 flex flex-col items-center py-10 px-4 sm:px-8 font-sans">
@@ -14,7 +14,9 @@ function App() {
             Rifa Huevo de Pascua
           </h1>
           <p className="text-gray-600 text-sm sm:text-base font-medium max-w-md mx-auto">
-            Hacé clic en los números ocupados (<span className="text-red-500 font-bold">✕</span>) para ver quién los compró.
+            Hacé clic en los números ocupados (
+            <span className="text-red-500 font-bold">✕</span>) para ver quién
+            los compró.
           </p>
         </div>
 

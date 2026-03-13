@@ -1,0 +1,27 @@
+{
+  "name": "rifa-huevopascua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:backend": "npm run dev --workspace=back",
+    "dev:frontend": "npm run dev --workspace=front-huevorifa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laureanojuarez/rifa-huevopascua.git"
+  },
+  "workspaces": [
+    "back",
+    "front-huevorifa"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/laureanojuarez/rifa-huevopascua/issues"
+  },
+  "homepage": "https://github.com/laureanojuarez/rifa-huevopascua#readme"
+}
