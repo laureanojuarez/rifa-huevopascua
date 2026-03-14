@@ -1,4 +1,5 @@
 import { Caja } from "./components/Caja";
+import { CuentaRegresiva } from "./components/CuentaRegresiva";
 import { useNumeros } from "./hooks/useNumeros";
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
             los compró.
           </p>
         </div>
+
+        <CuentaRegresiva />
 
         {/* Loading o Grilla */}
         {loading ? (
