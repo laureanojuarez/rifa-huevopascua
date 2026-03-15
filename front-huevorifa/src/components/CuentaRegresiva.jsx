@@ -11,7 +11,7 @@ export const CuentaRegresiva = () => {
   useEffect(() => {
     const intervalo = setInterval(() => {
       const tiempoRestante = FECHA_OBJETIVO - Date.now();
-      
+
       if (tiempoRestante <= 0) {
         setTiempo(0);
         clearInterval(intervalo);
@@ -19,7 +19,7 @@ export const CuentaRegresiva = () => {
         setTiempo(tiempoRestante);
       }
     }, 1000);
-    
+
     return () => clearInterval(intervalo);
   }, []);
 
@@ -31,11 +31,11 @@ export const CuentaRegresiva = () => {
   const formatUnit = (unit) => unit.toString().padStart(2, "0");
 
   return (
-    <div className="cuenta-regresiva  p-6 sm:p-10 mb-10 ">
+    <div className="cuenta-regresiva p-6 sm:p-10 mb-4 ">
       <h2 className="text-gray-800 text-xl font-medium mb-6 uppercase tracking-widest">
         Faltan
       </h2>
-      <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-6xl sm:text-8xl text-purple-900 drop-shadow-sm">
+      <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-purple-900 drop-shadow-sm">
         <div className="flex flex-col items-center">
           <span>{formatUnit(dias)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Días</span>
