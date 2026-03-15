@@ -12,7 +12,7 @@ function App() {
         <div className="text-center mb-8 space-y-2">
           <span className="text-5xl inline-block drop-shadow-md mb-2">🐣</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-orange-500 tracking-tight drop-shadow-sm">
-            Rifa Huevo de Pascua
+            El Huevazo
           </h1>
           <p className="text-gray-600 text-sm sm:text-base font-medium max-w-md mx-auto">
             Hacé clic en los números ocupados (
