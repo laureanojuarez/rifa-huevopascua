@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { X } from "lucide-react";
 
-export const Caja = ({ numero, user }) => {
+export const Caja = memo(({ numero, user }) => {
     const [flipped, setFlipped] = useState(false);
     const tomado = !!user
 
@@ -25,8 +25,8 @@ export const Caja = ({ numero, user }) => {
                 <div
                     className={`absolute inset-0 flex flex-col items-center justify-center rounded-xl shadow-sm border-2 
             ${tomado
-                            ? "border-yellow-400 bg-yellow-100/80"
-                            : "border-gray-200 bg-white hover:border-yellow-300"
+                            ? "border-pink-300 bg-pink-100/80"
+                            : "border-sky-200 bg-white hover:border-sky-300 hover:bg-sky-50"
                         }
           `}
                     style={{
@@ -35,7 +35,7 @@ export const Caja = ({ numero, user }) => {
                     }}
                 >
                     <p
-                        className={`font-bold text-xl sm:text-2xl leading-none ${tomado ? "text-yellow-700" : "text-gray-700"
+                        className={`font-bold text-xl sm:text-2xl leading-none ${tomado ? "text-pink-600" : "text-sky-700"
                             }`}
                     >
                         {numero}
@@ -49,18 +49,18 @@ export const Caja = ({ numero, user }) => {
 
                 {/* Dorso */}
                 <div
-                    className="absolute inset-0 border-2 border-yellow-500 bg-linear-to-br from-yellow-400 to-orange-400 flex flex-col items-center justify-center rounded-xl shadow-md p-2"
+                    className="absolute inset-0 border-2 border-pink-300 bg-linear-to-br from-pink-200 to-rose-300 flex flex-col items-center justify-center rounded-xl shadow-md p-2"
                     style={{
                         backfaceVisibility: "hidden",
                         WebkitBackfaceVisibility: "hidden",
                         transform: "rotateY(180deg)",
                     }}
                 >
-                    <p className="text-white font-bold text-center text-xs sm:text-sm leading-tight line-clamp-3">
+                    <p className="text-pink-900 font-bold text-center text-xs sm:text-sm leading-tight line-clamp-3">
                         {`${user?.nombre} ${user?.apellido}` || user?.apodo}
                     </p>
                 </div>
             </div>
         </div>
     );
-};
+});
