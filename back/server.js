@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-process.loadEnvFile()
+try { process.loadEnvFile(); } catch (e) { /* ignore on production */ }
 
 export const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
