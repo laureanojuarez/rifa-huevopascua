@@ -37,22 +37,22 @@ export const CuentaRegresiva = () => {
       </h2>
       <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-violet-500 drop-shadow-sm">
         <div className="flex flex-col items-center">
-          <span>{formatUnit(dias)}</span>
+          <span suppressHydrationWarning>{formatUnit(dias)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Días</span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
-          <span>{formatUnit(horas)}</span>
+          <span suppressHydrationWarning>{formatUnit(horas)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Hs</span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
-          <span>{formatUnit(minutos)}</span>
+          <span suppressHydrationWarning>{formatUnit(minutos)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Min</span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
-          <span>{formatUnit(segundos)}</span>
+          <span suppressHydrationWarning>{formatUnit(segundos)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Seg</span>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import { Caja } from "@/components/Caja";
 import { CuentaRegresiva } from "@/components/CuentaRegresiva";
 import { Premios } from "@/components/Premios";
-import { Numeros } from "@/libs/models/Numeros";
-import { User } from "@/libs/models/Users";
+import { Numeros, User } from "@/libs/models/relations";
 
 export const dynamic = "force-dynamic";
 
@@ -25,8 +24,7 @@ export default async function Home() {
     }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+      <main className="flex flex-col items-center flex-1 w-full max-w-5xl mx-auto px-2 pb-12 gap-6">
         <Premios/>
         <CuentaRegresiva/>
         <p className="text-gray-600 text-sm sm:text-base font-medium max-w-md mx-auto text-center">
@@ -49,6 +47,5 @@ export default async function Home() {
                     </div>
                 )}
       </main>
-    </div>
   );
 }
