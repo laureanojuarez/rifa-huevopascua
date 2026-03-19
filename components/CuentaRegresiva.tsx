@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./cuentaregresiva.css";
 
 // Movemos la fecha objetivo fuera del componente para que no se re-evalúe en cada render
-const FECHA_OBJETIVO = new Date("2026-04-05T00:00:00").getTime();
+const FECHA_OBJETIVO = new Date("2026-04-03T00:00:00").getTime(); // Viernes tres de abril
 
 export const CuentaRegresiva = () => {
   const [tiempo, setTiempo] = useState(Math.max(FECHA_OBJETIVO - Date.now(), 0));

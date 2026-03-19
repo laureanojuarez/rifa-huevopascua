@@ -25,7 +25,7 @@ export const Premios = () => {
                             1<span className="text-xl font-bold text-gray-500 align-top">er</span> Premio
                         </h3>
                         <p className="text-gray-600 text-lg leading-relaxed font-medium">
-                            Un súper huevo de pascua nro. 40 con <span className="font-bold text-orange-500">más de 1 kilo</span> del más rico chocolate relleno con confites y bombones.
+                            Un súper huevo de pascua nro. 35 con <span className="font-bold text-orange-500">aproximadamente 1 kilo y 40cm de alto</span> del más rico chocolate relleno con confites y bombones.
                         </p>
                     </div>
                 </div>
