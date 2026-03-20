@@ -10,7 +10,7 @@ export const Caja = memo(({ numero, user }: { numero: number; user: any }) => {
         <div
             className={`relative w-full aspect-square select-none ${tomado
                 ? "cursor-pointer"
-                : "cursor-default drop-shadow-sm hover:drop-shadow-md transition-all hover:-translate-y-1"
+                : "cursor-default transition-transform hover:-translate-y-1"
                 }`}
             style={{
                 perspective: tomado ? "1000px" : "none",
@@ -28,10 +28,10 @@ export const Caja = memo(({ numero, user }: { numero: number; user: any }) => {
             >
                 {/* Frente */}
                 <div
-                    className={`absolute inset-0 flex flex-col items-center justify-center rounded-xl shadow-sm border-2 
+                    className={`absolute inset-0 flex flex-col items-center justify-center rounded-xl shadow-sm transition-colors duration-200 border-2 
             ${tomado
                             ? "border-pink-300 bg-pink-100/80"
-                            : "border-sky-200 bg-white hover:border-sky-300 hover:bg-sky-50"
+                            : "border-sky-200 bg-white hover:border-sky-300 hover:bg-sky-50 hover:shadow-md"
                         }
           `}
                     style={{
@@ -47,7 +47,7 @@ export const Caja = memo(({ numero, user }: { numero: number; user: any }) => {
                     </p>
                     {tomado && (
                         <div className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5">
-                            <X className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-red-500 drop-shadow-sm stroke-3" />
+                            <X className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-red-500 stroke-3" />
                         </div>
                     )}
                 </div>
