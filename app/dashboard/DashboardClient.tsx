@@ -29,7 +29,7 @@ export function DashboardClient({ numerosData }: { numerosData: any[] }) {
             <h1 className="text-3xl font-bold mb-6 text-gray-800">Panel de Administración de Rifa</h1>
 
             <div className="grid grid-cols-5 sm:grid-cols-10 gap-2">
-                {Array.from({ length: MAX_NUMEROS }, (_, i) => i + 1).map((num) => {
+                {Array.from({ length: MAX_NUMEROS }, (_, i) => i).map((num) => {
                     const data = dbNumerosMap.get(num);
                     const isOccupied = !!data?.usuario_id;
                     
