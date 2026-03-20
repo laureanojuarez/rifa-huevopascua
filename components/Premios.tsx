@@ -2,7 +2,7 @@ import { Trophy, Gift, Sparkles } from "lucide-react";
 
 export const Premios = () => {
     return (
-        <section className="w-full max-w-4xl mx-auto px-4 py-8 mb-4">
+        <section className="w-full max-w-4xl mx-auto px-4 py-4 mb-4">
             <div className="text-center mb-10 group">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-slate-500 to-slate-600 inline-flex items-center gap-3 justify-center">
                     <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
@@ -10,6 +10,7 @@ export const Premios = () => {
                     <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
                 </h2>
                 <p className="text-gray-600 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos increíbles premios!</p>
+                <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: 341 371-1846</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
