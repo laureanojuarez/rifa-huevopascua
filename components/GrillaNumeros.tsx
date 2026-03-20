@@ -32,7 +32,7 @@ export async function GrillaNumeros() {
     }
 
     return (
-        <div className="w-full grid grid-cols-5 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-2 mt-4">
+        <div className="w-full max-w-[340px] sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-5 sm:grid-cols-7 md:grid-cols-10 lg:grid-cols-12 gap-1.5 sm:gap-2 mt-4 px-2">
             {numeros.map((n: any) => (
                 <Caja key={n.numero} numero={n.numero} user={n.user} />
             ))}
