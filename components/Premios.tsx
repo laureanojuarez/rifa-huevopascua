@@ -5,8 +5,8 @@ import Image from "next/image";
 export const Premios = () => {
     return (
         <section className="w-full max-w-4xl mx-auto px-4 py-8 mb-4">
-            <div className="text-center mb-12 group">
-                <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-slate-500 to-slate-600 inline-flex items-center gap-3 justify-center">
+            <div className="text-center mb-4 group">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 inline-flex items-center gap-3 justify-center pb-1">
                     <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
                     Premios de la Rifa
                     <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
@@ -15,7 +15,7 @@ export const Premios = () => {
                 <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: 341 371-1846</p>
             </div>
 
-            <div className="relative flex justify-center items-center my-16 md:my-28 group">
+            <div className="relative flex justify-center items-center my-6 md:my-28 group">
                 {/* Efecto de difuminado (glow) gigante detrás de la imagen */}
                 <div className="absolute bg-linear-to-r from-pink-400 via-orange-300 to-yellow-400 rounded-full blur-[80px] md:blur-[120px] opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 w-80 h-80 sm:w-96 sm:h-96 md:w-lg md:h-lg z-0"></div>
 
