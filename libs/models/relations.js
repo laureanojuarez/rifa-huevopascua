@@ -1,7 +1,7 @@
 import { Numeros } from "./Numeros.js";
-import { User } from "./Users.js";
+import { Usuarios } from "./Usuarios.js";
 
-User.hasMany(Numeros, { foreignKey: "user_id" });
-Numeros.belongsTo(User, { foreignKey: "user_id" });
+Usuarios.hasMany(Numeros, { foreignKey: "usuario_id" });
+Numeros.belongsTo(Usuarios, { foreignKey: "usuario_id" });
 
-export { Numeros, User };
+export { Numeros, Usuarios };

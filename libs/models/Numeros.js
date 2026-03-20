@@ -7,11 +7,11 @@ export const Numeros = sequelize.define("numeros", {
     allowNull: false,
     primaryKey: true,
   },
-  user_id: {
+  usuario_id: {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
-      model: "users",
+      model: "usuarios",
       key: "id",
     },
   },
