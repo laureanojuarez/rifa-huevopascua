@@ -9,11 +9,11 @@ export const Usuarios = sequelize.define("usuarios", {
   },
   nombre: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   apellido: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   apodo: {
     type: DataTypes.STRING,
