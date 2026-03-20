@@ -9,7 +9,7 @@ export const Premios = () => {
                     Premios de la Rifa
                     <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
                 </h2>
-                <p className="text-gray-600 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos increíbles premios!</p>
+                <p className="text-gray-600 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos dos lindos premios!</p>
                 <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: 341 371-1846</p>
             </div>
 
@@ -26,7 +26,7 @@ export const Premios = () => {
                             1<span className="text-xl font-bold text-gray-500 align-top">er</span> Premio
                         </h3>
                         <p className="text-gray-600 text-lg leading-relaxed font-medium">
-                            Un súper huevo de pascua nro. 35 con <span className="font-bold text-orange-500">aproximadamente 1 kilo y 40cm de alto</span> del más rico chocolate relleno con confites y bombones.
+                            Un súper huevo de pascua nro. 35 con <span className="font-bold text-orange-500">aproximadamente 1 kilo y 40cm de alto</span> del más rico chocolate relleno con confites, bombones y sorpresa.
                         </p>
                     </div>
                 </div>

@@ -64,4 +64,6 @@ export const Caja = memo(({ numero, user }: { numero: number; user: any }) => {
             </div>
         </div>
     );
+}, (prevProps, nextProps) => {
+    return prevProps.numero === nextProps.numero && prevProps.user?.id === nextProps.user?.id;
 });
