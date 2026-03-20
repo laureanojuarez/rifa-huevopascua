@@ -16,6 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rifa Huevo de Pascua",
   description: "Rifa Huevo de Pascua - Gry",
+  openGraph: {
+    title: "Rifa Huevo de Pascua",
+    description: "¡Participá por el súper huevo de pascua y una rosca casera!",
+    images: ["/huevoicon.png"],
+    type: "website",
+    locale: "es_AR",
+  }
 };
 
 export default function RootLayout({

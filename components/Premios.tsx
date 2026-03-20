@@ -15,7 +15,7 @@ export const Premios = () => {
                 <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: 341 371-1846</p>
             </div>
 
-            <div className="relative flex justify-center items-center my-6 md:my-28 group">
+            <div className="relative flex justify-center items-center my-6 md:my-10 group">
                 {/* Efecto de difuminado (glow) gigante detrás de la imagen */}
                 <div className="absolute bg-linear-to-r from-pink-400 via-orange-300 to-yellow-400 rounded-full blur-[80px] md:blur-[120px] opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 w-80 h-80 sm:w-96 sm:h-96 md:w-lg md:h-lg z-0"></div>
 
@@ -24,8 +24,8 @@ export const Premios = () => {
                     <Image
                         src={huevopascua}
                         alt="gigante huevo de pascua 40cm"
-                        width={600}
-                        height={600}
+                        width={500}
+                        height={500}
                         className="drop-shadow-[0_40px_40px_rgba(0,0,0,0.5)] object-contain w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]"
                         priority
                     />
