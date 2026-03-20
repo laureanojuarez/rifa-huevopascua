@@ -43,7 +43,7 @@ export const Caja = memo(({ numero, user }: { numero: number; user: any }) => {
                         className={`font-bold text-lg sm:text-xl leading-none ${tomado ? "text-pink-600" : "text-sky-700"
                             }`}
                     >
-                        {numero}
+                        {String(numero).padStart(2, '0')}
                     </p>
                     {tomado && (
                         <div className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5">
