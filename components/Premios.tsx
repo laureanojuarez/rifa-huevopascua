@@ -1,9 +1,11 @@
 import { Trophy, Gift, Sparkles } from "lucide-react";
+import huevopascua from '../public/huevopascua.png'
+import Image from "next/image";
 
 export const Premios = () => {
     return (
-        <section className="w-full max-w-4xl mx-auto px-4 py-4 mb-4">
-            <div className="text-center mb-10 group">
+        <section className="w-full max-w-4xl mx-auto px-4 py-8 mb-4">
+            <div className="text-center mb-12 group">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-slate-500 to-slate-600 inline-flex items-center gap-3 justify-center">
                     <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
                     Premios de la Rifa
@@ -13,7 +15,24 @@ export const Premios = () => {
                 <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: 341 371-1846</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="relative flex justify-center items-center my-16 md:my-28 group">
+                {/* Efecto de difuminado (glow) gigante detrás de la imagen */}
+                <div className="absolute bg-linear-to-r from-pink-400 via-orange-300 to-yellow-400 rounded-full blur-[80px] md:blur-[120px] opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 w-80 h-80 sm:w-96 sm:h-96 md:w-lg md:h-lg z-0"></div>
+
+                {/* Contenedor interactivo de la imagen */}
+                <div className="relative z-10 transform transition-all duration-700 hover:scale-105 hover:-rotate-2">
+                    <Image
+                        src={huevopascua}
+                        alt="gigante huevo de pascua 40cm"
+                        width={600}
+                        height={600}
+                        className="drop-shadow-[0_40px_40px_rgba(0,0,0,0.5)] object-contain w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]"
+                        priority
+                    />
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-20">
                 {/* 1er Premio */}
                 <div className="relative group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 overflow-hidden">
                     <div className="absolute top-0 inset-x-0 h-3 bg-linear-to-r from-yellow-200 via-orange-200 to-pink-200"></div>
