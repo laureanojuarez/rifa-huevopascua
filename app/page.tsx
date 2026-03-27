@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center flex-1 w-full max-w-5xl mx-auto px-2 pb-12 gap-6 overflow-x-hidden">
+        <main className="flex flex-col items-center flex-1 w-full max-w-5xl mx-auto pb-12 gap-6 overflow-x-hidden">
             <Premios />
             <CuentaRegresiva />
             <p className="text-gray-600 text-sm sm:text-base font-medium max-w-md mx-auto text-center">

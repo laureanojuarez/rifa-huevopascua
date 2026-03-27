@@ -1,4 +1,4 @@
-import { Trophy, Gift, Sparkles } from "lucide-react";
+import { Trophy, Gift, Sparkles, Rabbit } from "lucide-react";
 import huevopascua from '../public/huevopascua.png'
 import Image from "next/image";
 
@@ -7,15 +7,15 @@ export const Premios = () => {
         <section className="w-full max-w-4xl mx-auto py-4 mb-4">
             <div className="text-center mb-4 group ">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 inline-flex items-center gap-3 justify-center pb-1 ">
-                    <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-200 animate-pulse font-fraunces" />
-                    <div className="flex flex-col items-center text-yellow-700">
+                    <Rabbit className="w-10 h-10 md:w-10 md:h-10 text-stone-600 animate-pulse font-fraunces" />
+                    <div className="flex flex-col items-center text-yellow-800 text-6xl">
                         <span>Rifa</span>
                         <span>Pascua</span>
                     </div>
-                    <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-200 animate-pulse" />
+                    <Rabbit className="w-10 h-10 md:w-10 md:h-10 text-stone-600 animate-pulse" />
                 </h2>
-                <p className="text-gray-600 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos dos lindos premios!</p>
-                <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: </p>
+                <p className="text-gray-800 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos dos lindos premios!</p>
+                <p className="text-gray-800 mt-3 text-lg font-medium">Para más información: </p>
                 <a href="https://wa.me/543413711846" className=" mt-3 text-lg font-medium">341 371-1846</a>
             </div>
 
@@ -36,7 +36,7 @@ export const Premios = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-20 px-2">
                 {/* 1er Premio */}
                 <div className="relative group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 overflow-hidden">
                     <div className="absolute top-0 inset-x-0 h-3 bg-linear-to-r from-yellow-200 via-orange-200 to-pink-200"></div>
@@ -55,7 +55,7 @@ export const Premios = () => {
                 </div>
 
                 {/* 2do Premio */}
-                <div className="relative group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-sky-100 overflow-hidden">
+                <div className="relative group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-sky-100 overflow-hidden px-2">
                     <div className="absolute top-0 inset-x-0 h-3 bg-linear-to-r from-sky-200 via-teal-200 to-cyan-200"></div>
                     <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-sky-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="p-8 md:p-10 flex flex-col items-center text-center relative z-10">

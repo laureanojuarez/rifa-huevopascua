@@ -34,7 +34,7 @@ export const Caja = memo(
             ${
               tomado
                 ? "border-pink-300 bg-pink-100/80"
-                : "border-sky-200 bg-white hover:border-sky-300 hover:bg-sky-50 hover:shadow-md"
+                : "border-stone-200 bg-white hover:border-stone-300 hover:bg-stone-50 hover:shadow-md"
             }
           `}
             style={{
@@ -44,7 +44,7 @@ export const Caja = memo(
           >
             <p
               className={`font-bold text-lg sm:text-xl leading-none ${
-                tomado ? "text-pink-600" : "text-sky-700"
+                tomado ? "text-pink-600" : "text-stone-700"
               }`}
             >
               {String(numero).padStart(2, "0")}
@@ -59,20 +59,19 @@ export const Caja = memo(
           {/* Dorso */}
           {tomado && (
             <div
-              className="absolute inset-0 border-2 border-pink-300 bg-linear-to-br from-pink-200 to-rose-300 flex flex-col items-center justify-center rounded-xl shadow-md p-2"
+              className="absolute inset-0 border-2 border-pink-300 bg-linear-to-br from-pink-200 to-rose-300 flex flex-col items-center justify-center rounded-xl shadow-md p-1 sm:p-2 overflow-hidden"
               style={{
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
                 transform: "rotateY(180deg)",
               }}
             >
-              <p className="text-pink-900 font-bold text-center text-xs sm:text-sm leading-tight line-clamp-3">
+              <p className="text-pink-900 font-bold text-center text-[10px] sm:text-xs leading-tight line-clamp-3 break-words w-full">
                 {[user?.nombre, user?.apellido]
                   .filter((v) => v && v.trim() !== "")
                   .join(" ") ||
                   user?.apodo ||
                   "Sin nombre"}
-                {console.log("Usuario en caja:", user)}
               </p>
             </div>
           )}
