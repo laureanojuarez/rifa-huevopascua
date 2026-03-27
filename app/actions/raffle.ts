@@ -10,8 +10,8 @@ export async function assignUserToNumber(prevState: any, formData: FormData) {
         const apellido = formData.get("apellido") as string;
         const apodo = formData.get("apodo") as string;
 
-        if (isNaN(numero) || !nombre || !apellido) {
-            return { error: "Faltan campos requeridos (Nombre, Apellido o Número)." };
+        if (isNaN(numero) || (!nombre && !apellido && !apodo)) {
+            return { error: "Debe ingresar al menos Nombre, Apellido o Apodo." };
         }
 
         // Comprobar si el número existe
@@ -47,14 +47,14 @@ export async function assignUserToNumber(prevState: any, formData: FormData) {
 export async function unassignNumber(prevState: any, formData: FormData) {
     try {
         const numero = parseInt(formData.get("numero") as string);
-        
+
         const numRecord: any = await Numeros.findByPk(numero);
         if (numRecord && numRecord.usuario_id) {
             const userId = numRecord.usuario_id;
-            
+
             // 1. Liberar el número
             await Numeros.update({ usuario_id: null }, { where: { numero } });
-            
+
             // 2. Comprobar si el usuario no tiene más números y borrarlo si es así
             const count = await Numeros.count({ where: { usuario_id: userId } });
             if (count === 0) {
