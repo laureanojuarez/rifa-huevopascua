@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import "./cuentaregresiva.css";
 
 // Movemos la fecha objetivo fuera del componente para que no se re-evalúe en cada render
 const FECHA_OBJETIVO = new Date("2026-04-03T21:00:00").getTime(); // Viernes tres de abril 21 horas
@@ -35,8 +34,8 @@ export const CuentaRegresiva = () => {
   const formatUnit = (unit: number) => unit.toString().padStart(2, "0");
 
   return (
-    <div className="cuenta-regresiva p-6 sm:p-10 mb-4 ">
-      <h2 className="text-gray-800 text-xl font-medium mb-6 uppercase tracking-widest">
+    <div className="p-4 sm:p-10 ">
+      <h2 className="text-gray-800 text-xl font-medium mb-6 uppercase tracking-widest text-center font-fraunces">
         Faltan
       </h2>
       <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-violet-500 drop-shadow-sm">

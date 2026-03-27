@@ -4,15 +4,19 @@ import Image from "next/image";
 
 export const Premios = () => {
     return (
-        <section className="w-full max-w-4xl mx-auto px-4 py-8 mb-4">
-            <div className="text-center mb-4 group">
-                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 inline-flex items-center gap-3 justify-center pb-1">
-                    <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
-                    Premios de la Rifa
-                    <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-300 animate-pulse" />
+        <section className="w-full max-w-4xl mx-auto py-4 mb-4">
+            <div className="text-center mb-4 group ">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 inline-flex items-center gap-3 justify-center pb-1 ">
+                    <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-200 animate-pulse font-fraunces" />
+                    <div className="flex flex-col items-center text-yellow-700">
+                        <span>Rifa</span>
+                        <span>Pascua</span>
+                    </div>
+                    <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-pink-200 animate-pulse" />
                 </h2>
                 <p className="text-gray-600 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos dos lindos premios!</p>
-                <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: 341 371-1846</p>
+                <p className="text-gray-600 mt-3 text-lg font-medium">Para más información: </p>
+                <a href="https://wa.me/543413711846" className=" mt-3 text-lg font-medium">341 371-1846</a>
             </div>
 
             <div className="relative flex justify-center items-center my-6 md:my-10 group">
@@ -37,7 +41,7 @@ export const Premios = () => {
                 <div className="relative group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 overflow-hidden">
                     <div className="absolute top-0 inset-x-0 h-3 bg-linear-to-r from-yellow-200 via-orange-200 to-pink-200"></div>
                     <div className="absolute -right-10 -top-10 w-32 h-32 bg-orange-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="p-8 md:p-10 flex flex-col items-center text-center relative z-10">
+                    <div className="p-8 md:p-10 flex flex-col items-center text-center relative z-10 font-geist">
                         <div className="w-24 h-24 bg-linear-to-br from-orange-50 to-yellow-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-inner border border-orange-200">
                             <Trophy className="w-12 h-12 text-orange-400 drop-shadow-sm" />
                         </div>
@@ -55,13 +59,13 @@ export const Premios = () => {
                     <div className="absolute top-0 inset-x-0 h-3 bg-linear-to-r from-sky-200 via-teal-200 to-cyan-200"></div>
                     <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-sky-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="p-8 md:p-10 flex flex-col items-center text-center relative z-10">
-                        <div className="w-24 h-24 bg-linear-to-br from-sky-50 to-teal-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-inner border border-sky-200">
+                        <div className="w-24 h-24 bg-linear-to-br from-sky-50 to-teal-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-inner border border-sky-200 ">
                             <Gift className="w-12 h-12 text-sky-400 drop-shadow-sm" />
                         </div>
-                        <h3 className="text-3xl font-bold text-gray-800 mb-4 tracking-tight">
+                        <h3 className="text-3xl font-bold text-gray-800 mb-4 tracking-tight font-geist">
                             2<span className="text-xl font-semibold text-gray-500 align-top">do</span> Premio
                         </h3>
-                        <p className="text-gray-600 text-lg leading-relaxed font-medium">
+                        <p className="text-gray-600 text-lg leading-relaxed font-medium font-geist">
                             Una deliciosa <span className="font-bold text-sky-500">rosca casera</span> de pascua para disfrutar y compartir en familia.
                         </p>
                     </div>

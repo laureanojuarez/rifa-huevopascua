@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 
@@ -10,6 +10,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
 });
 
@@ -33,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-linear-to-br from-sky-100 via-pink-100 to-yellow-100 flex flex-col font-sans `}
+        className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} antialiased min-h-screen bg-linear-to-br from-sky-100 via-pink-100 to-yellow-100 flex flex-col font-sans `}
       >
         <Header />
         {children}
