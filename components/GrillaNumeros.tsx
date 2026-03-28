@@ -1,5 +1,5 @@
 import { Caja } from "@/components/Caja";
-import { Numeros, Usuarios } from "@/libs/models/relations";
+import { getNumeros } from "@/libs/services/numeros.service";
 
 export const dynamic = "force-dynamic";
 
@@ -8,14 +8,7 @@ export async function GrillaNumeros() {
     let error = null;
 
     try {
-        const rawNumeros = await Numeros.findAll({
-            include: {
-                model: Usuarios,
-                attributes: ["id", "nombre", "apellido", "apodo"],
-            },
-            order: [["numero", "ASC"]],
-        });
-        numeros = rawNumeros.map((n: any) => n.toJSON()); // Convert Sequelize instances to plain objects for transfer to Client Components
+        numeros = await getNumeros();
     } catch (err) {
         console.error("Error fetching data:", err);
         error = "Hubo un problema al cargar los números de la rifa.";
@@ -23,11 +16,7 @@ export async function GrillaNumeros() {
 
     if (error) {
         return (
-            <div className="flex justify-center items-center h-40 text-center w-full max-w-lg mt-8">
-                <div className="bg-red-50/80 backdrop-blur-sm border border-red-200 text-red-600 px-6 py-4 rounded-xl shadow-sm text-lg font-medium">
-                    {error}
-                </div>
-            </div>
+            <div>Error al cargar números</div>
         );
     }
 

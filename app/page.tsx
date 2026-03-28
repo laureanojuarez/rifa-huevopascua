@@ -4,6 +4,7 @@ import { GrillaNumeros } from "@/components/GrillaNumeros";
 import { Suspense } from "react";
 import { Rabbit } from "lucide-react";
 import { Header } from "@/components/Header";
+import { CountNumber } from "@/components/CountNumber";
 
 export const dynamic = "force-dynamic";
 
@@ -49,6 +50,8 @@ export default function Home() {
             }>
                 <GrillaNumeros />
             </Suspense>
+
+            <CountNumber />
         </main>
     );
 }
