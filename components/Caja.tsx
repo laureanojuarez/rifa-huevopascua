@@ -9,11 +9,10 @@ export const Caja = memo(
 
     return (
       <div
-        className={`relative w-full aspect-square select-none ${
-          tomado
+        className={`relative w-full aspect-square select-none ${tomado
             ? "cursor-pointer"
             : "cursor-default transition-transform hover:-translate-y-1"
-        }`}
+          }`}
         style={{
           perspective: tomado ? "1000px" : "none",
           contentVisibility: "auto",
@@ -31,11 +30,10 @@ export const Caja = memo(
           {/* Frente */}
           <div
             className={`absolute inset-0 flex flex-col items-center justify-center rounded-xl shadow-sm transition-colors duration-200 border-2 
-            ${
-              tomado
+            ${tomado
                 ? "border-pink-300 bg-pink-100/80"
                 : "border-stone-200 bg-white hover:border-stone-300 hover:bg-stone-50 hover:shadow-md"
-            }
+              }
           `}
             style={{
               backfaceVisibility: "hidden",
@@ -43,9 +41,8 @@ export const Caja = memo(
             }}
           >
             <p
-              className={`font-bold text-lg sm:text-xl leading-none ${
-                tomado ? "text-pink-600" : "text-stone-700"
-              }`}
+              className={`font-bold text-lg sm:text-xl leading-none ${tomado ? "text-pink-600" : "text-stone-700"
+                }`}
             >
               {String(numero).padStart(2, "0")}
             </p>
@@ -66,7 +63,7 @@ export const Caja = memo(
                 transform: "rotateY(180deg)",
               }}
             >
-              <p className="text-pink-900 font-bold text-center text-[10px] sm:text-xs leading-tight line-clamp-3 break-words w-full">
+              <p className="text-pink-900 font-bold text-center text-[10px] sm:text-xs leading-tight line-clamp-3 wrap-break-word w-full">
                 {[user?.nombre, user?.apellido]
                   .filter((v) => v && v.trim() !== "")
                   .join(" ") ||

@@ -35,11 +35,11 @@ export const CuentaRegresiva = () => {
 
   return (
     <div className="p-4 sm:p-10 ">
-      <h2 className="text-gray-800 text-xl font-medium mb-6 uppercase tracking-widest text-center font-fraunces">
+      <h2 className="text-gray-800 text-xl font-medium mb-6 uppercase tracking-widest text-center">
         Faltan
       </h2>
-      <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-violet-500 drop-shadow-sm">
-        <div className="flex flex-col items-center">
+      <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-violet-500 drop-shadow-sm font-fraunces">
+        <div className="flex flex-col items-center ">
           <span suppressHydrationWarning>{formatUnit(dias)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Días</span>
         </div>

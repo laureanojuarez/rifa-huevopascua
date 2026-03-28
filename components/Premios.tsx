@@ -1,25 +1,13 @@
-import { Trophy, Gift, Sparkles, Rabbit } from "lucide-react";
+import { Trophy, Gift } from "lucide-react";
 import huevopascua from '../public/huevopascua.png'
 import Image from "next/image";
 
 export const Premios = () => {
     return (
-        <section className="w-full max-w-4xl mx-auto py-4 mb-4">
-            <div className="text-center mb-4 group ">
-                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 inline-flex items-center gap-3 justify-center pb-1 ">
-                    <Rabbit className="w-10 h-10 md:w-10 md:h-10 text-stone-600 animate-pulse font-fraunces" />
-                    <div className="flex flex-col items-center text-yellow-800 text-6xl">
-                        <span>Rifa</span>
-                        <span>Pascua</span>
-                    </div>
-                    <Rabbit className="w-10 h-10 md:w-10 md:h-10 text-stone-600 animate-pulse" />
-                </h2>
-                <p className="text-gray-800 mt-3 text-lg font-medium">¡Conseguí tu número y participá por estos dos lindos premios!</p>
-                <p className="text-gray-800 mt-3 text-lg font-medium">Para más información: </p>
-                <a href="https://wa.me/543413711846" className=" mt-3 text-lg font-medium">341 371-1846</a>
-            </div>
+        <section className="w-full max-w-4xl mx-auto mb-4">
 
-            <div className="relative flex justify-center items-center my-6 md:my-10 group">
+
+            <div className="relative flex justify-center items-center group">
                 {/* Efecto de difuminado (glow) gigante detrás de la imagen */}
                 <div className="absolute bg-linear-to-r from-pink-400 via-orange-300 to-yellow-400 rounded-full blur-[80px] md:blur-[120px] opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 w-80 h-80 sm:w-96 sm:h-96 md:w-lg md:h-lg z-0"></div>
 
