@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 
 // Movemos la fecha objetivo fuera del componente para que no se re-evalúe en cada render
-const FECHA_OBJETIVO = new Date("2026-04-03T21:00:00").getTime(); // Viernes tres de abril 21 horas
-
+const FECHA_OBJETIVO = new Date("2026-04-04T21:00:00").getTime(); // Sabado 04 de abril a las 21:00hs
 export const CuentaRegresiva = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [tiempo, setTiempo] = useState(0);
@@ -41,22 +40,30 @@ export const CuentaRegresiva = () => {
       <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-violet-500 drop-shadow-sm font-fraunces">
         <div className="flex flex-col items-center ">
           <span suppressHydrationWarning>{formatUnit(dias)}</span>
-          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Días</span>
+          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
+            Días
+          </span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
           <span suppressHydrationWarning>{formatUnit(horas)}</span>
-          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Hs</span>
+          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
+            Hs
+          </span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
           <span suppressHydrationWarning>{formatUnit(minutos)}</span>
-          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Min</span>
+          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
+            Min
+          </span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
           <span suppressHydrationWarning>{formatUnit(segundos)}</span>
-          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">Seg</span>
+          <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
+            Seg
+          </span>
         </div>
       </div>
     </div>
