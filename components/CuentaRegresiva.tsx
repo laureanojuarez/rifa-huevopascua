@@ -8,8 +8,8 @@ export const CuentaRegresiva = () => {
   const [tiempo, setTiempo] = useState(0);
 
   useEffect(() => {
-    setIsMounted(true);
     setTiempo(Math.max(FECHA_OBJETIVO - Date.now(), 0));
+    setIsMounted(true);
 
     const intervalo = setInterval(() => {
       const tiempoRestante = FECHA_OBJETIVO - Date.now();
@@ -25,6 +25,10 @@ export const CuentaRegresiva = () => {
     return () => clearInterval(intervalo);
   }, []);
 
+  if (!isMounted) {
+    return <div className="py-8 sm:p-10 min-h-50"></div>;
+  }
+
   const segundos = Math.floor((tiempo / 1000) % 60);
   const minutos = Math.floor((tiempo / (1000 * 60)) % 60);
   const horas = Math.floor((tiempo / (1000 * 60 * 60)) % 24);
@@ -33,34 +37,34 @@ export const CuentaRegresiva = () => {
   const formatUnit = (unit: number) => unit.toString().padStart(2, "0");
 
   return (
-    <div className="p-4 sm:p-10 ">
+    <div className="py-8 sm:p-10 ">
       <h2 className="text-gray-800 text-xl font-medium mb-6 uppercase tracking-widest text-center">
         Faltan
       </h2>
-      <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-5xl sm:text-8xl text-violet-500 drop-shadow-sm font-fraunces">
+      <div className="flex gap-4 sm:gap-8 justify-center items-center font-oswald text-4xl sm:text-8xl text-violet-500 drop-shadow-sm font-fraunces">
         <div className="flex flex-col items-center ">
-          <span suppressHydrationWarning>{formatUnit(dias)}</span>
+          <span>{formatUnit(dias)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
             Días
           </span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
-          <span suppressHydrationWarning>{formatUnit(horas)}</span>
+          <span>{formatUnit(horas)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
             Hs
           </span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
-          <span suppressHydrationWarning>{formatUnit(minutos)}</span>
+          <span>{formatUnit(minutos)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
             Min
           </span>
         </div>
         <span className="text-violet-300 -mt-8">:</span>
         <div className="flex flex-col items-center">
-          <span suppressHydrationWarning>{formatUnit(segundos)}</span>
+          <span>{formatUnit(segundos)}</span>
           <span className="text-sm sm:text-base font-sans font-semibold text-gray-500 uppercase tracking-widest mt-2">
             Seg
           </span>
